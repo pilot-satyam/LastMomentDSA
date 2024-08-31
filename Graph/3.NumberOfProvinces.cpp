@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+Q: L/C : https://leetcode.com/problems/number-of-provinces/description/
+Q: GFG : https://www.geeksforgeeks.org/problems/number-of-provinces/1
+*/
+
 class Solution {
     
     void dfs(int node,vector<int> &vis,vector<vector<int>> &adjLS)
