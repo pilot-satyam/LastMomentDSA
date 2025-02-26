@@ -15,6 +15,8 @@ using namespace std;
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
+        //if the root is nullptr, it will return true without checking the solve function, since null is symmetric tree. 
+        //If the root is not nullptr, it will check the symmetry of the left and right subtrees
         return root == NULL || solve(root->left,root->right);
     }
 

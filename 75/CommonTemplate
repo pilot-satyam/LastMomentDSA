@@ -1,0 +1,18 @@
+For Interval Based:
+
+Most of the Interval based problems require sorting
+1)sort the intervals (mostly on the second number)
+2) check for condition if it overlaps with previous intervals
+
+For stack : 
+
+Use single iteration to check the condition and push the elemnt into stack, like this 
+
+for(int j = 0;j<n;j++){
+            while(!st.empty() and temperatures[j] > temperatures[st.top()]){
+               int i = st.top();
+               st.pop();
+               ans[i] = j - i; // 1 - 0 ==> 40 - 30
+            }
+            st.push(j); //for first element directly insert and for next we can check condition and then insert
+        }

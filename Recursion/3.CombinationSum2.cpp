@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Q: https://leetcode.com/problems/combination-sum-ii/description/
+// Note: The solution set must not contain duplicate combinations.
 class Solution {
 
 public:
@@ -12,7 +14,7 @@ public:
         }
 
         for(int i=idx;i<a.size();i++){
-            if(i > idx and a[i]==a[i-1]) continue;
+            if(i > idx and a[i]==a[i-1]) continue; // to make sure it does not contain any duplicates
             if(a[i] > target) break;
             ds.push_back(a[i]);
             findCombinationSum(i+1,target-a[i],a,ans,ds);

@@ -48,8 +48,8 @@ public:
     while(temp){
         ListNode* front = temp->next;
         temp->next = prev;
-        prev = temp;
-        temp = front;
+        prev = temp; //temp ko hum prev ko assign karnege
+        temp = front; //front ko hum temp ko assign karnege
     }
     return prev;
    }

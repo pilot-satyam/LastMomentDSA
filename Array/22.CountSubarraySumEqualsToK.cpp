@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Q: https://takeuforward.org/arrays/count-subarray-sum-equals-k/
+
 int findAllSubarraysWithGivenSum(vector<int> &a,int k){
     unordered_map<int,int> m;
     m[0] = 1;

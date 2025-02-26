@@ -1,0 +1,55 @@
+/*
+
+Basics but important topics
+
+*/
+
+DFS can find shortest path but not always.
+
+Suppose your graph has 4 nodes and 4 edges, edges are like this.
+
+1 4
+
+1 3
+
+2 4
+
+2 3
+
+Here cycle exists.
+
+So as we can see length of shortest path from 1 to 3 is 1 but we don't know how recursion will work in dfs.
+
+If you start dfs from 1 it can go to 1 -> 4 -> 2 -> 3. In this path length from 1 to 3 will be 3 but it must be 1.
+
+Graph which does not contain cycles(trees e.g.) dfs will find shortest path.
+
+
+
+LLD Resource: https://github.com/ashishps1/awesome-low-level-design
+
+**  removing the last character from a string takes constant time, whereas removing a 
+character from an arbitrary position requires O(n) time.
+
+* In DFS although we reach to our destination it is not guranteed that we will reach through the shortest
+path only, because we traverse back and explore the other paths only when we do not found our target 
+value, if target is found earlier then we will not check other path although a shorter path might be available.
+
+==> In C++, std::string::npos is a constant value that represents an invalid or "not found" position 
+in a string. It is used in the context of string searching or string manipulation to indicate that a 
+search operation has failed to find a substring.
+
+==> in short it means(negative position) ki agar index is not at negative position then return it.
+
+==> std::string::npos is of type std::size_t (which is an unsigned integral type) and is typically 
+defined as the maximum value that can be held by a std::size_t variable. In essence, it is the largest
+possible index that is unlikely to occur in normal string operations.
+
+Common Usage of std::string::npos:
+1) When searching for a substring: If a substring is not found in a string, many string functions 
+   return std::string::npos.
+
+2) In string manipulation: It can be used as a sentinel value to represent an invalid position or 
+   as an end marker when performing operations like substring extraction.
+
+

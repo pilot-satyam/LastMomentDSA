@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Q: https://leetcode.com/problems/majority-element/description/
+
 // Better soln  
 class Solution {
 public:

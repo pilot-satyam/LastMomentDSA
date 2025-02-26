@@ -5,6 +5,59 @@ using namespace std;
 * Ques: https://leetcode.com/problems/integer-to-english-words/
 */
 
+//New Solution : 
+//Using Java
+//T.C ==> O(log(n))
+//S.C ==> O(1)
+	public String numberToWords(int num){
+	    if(num == 0) return "Zero";
+	    String[] ones = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+	    String[] tens = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+        String[] thousands = {"", "Thousand", "Million", "Billion"};
+        
+        //For accumulating result
+        StringBuilder result = new StringBuilder();
+        int groupIdx= 0;
+        //processing numbers in terms of chunks (1000)
+        while(num > 0){
+            
+            //last 3 digits
+            if(num % 1000 != 0){
+                StringBuilder sb = new StringBuilder();
+                int part = num % 1000;
+                
+                //Handling hundreds
+                if(part >= 100){
+                    sb.append(ones[part/100]).append("Hundred");
+                    part %= 100;
+                }
+                
+                //Handling tens and ones
+                if(part >= 20){
+                    sb.append(tens[part/10]).append("");
+                    part %= 10;
+                }
+                
+                //Handling units
+                if(part > 0){
+                    sb.append(ones[part]).append("");
+                }
+                
+                //appending the scale (Thousand,Million,Billion)
+                sb.append(thousands[groupIdx]).append("");
+                
+                //Inserting group result at beginning of final result
+                result.insert(0,sb);
+            }
+            //next chunk of 1000
+            num /= 1000;
+            groupIdx++;
+        }
+        return result.toString().trim();
+	}
+
+//using c++
+
 class Solution {
 public:
     string numberToWords(int num) {

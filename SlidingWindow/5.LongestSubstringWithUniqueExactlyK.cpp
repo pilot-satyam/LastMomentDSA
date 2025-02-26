@@ -12,8 +12,8 @@ class Solution{
     unordered_map<char,int> m;
     while(right<s.size()){
         m[s[right]]++;
-        if(m.size() > k){
-            m[s[left]]--;
+        if(m.size() > k){ //eg map ==> a,b,c,d and k = 3 then this condition becomes true
+            m[s[left]]--; //initially removing first element from map
             if(m[s[left]] == 0){
                 m.erase(s[left]);
             }

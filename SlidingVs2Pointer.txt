@@ -1,0 +1,47 @@
+Sliding Window Technique:
+
+The sliding window is usually applied to problems where you need to find a subarray or substring that meets certain conditions (like sum, product, or length).
+
+The key idea is to have a "window" (a range or subset of elements) that "slides" through the array to explore different possibilities.
+
+The window can be of a fixed size (like in problems involving a subarray of length k) or it can expand and contract dynamically based on conditions (like in problems with sums or other criteria).
+
+Example use case: Find the maximum sum of any subarray of size k in an array.
+
+How it works:
+
+Start by initializing the window at the beginning of the array.
+Move the window forward by shifting the starting or ending points of the window and update the results accordingly.
+
+
+Two-Pointer Technique:
+The two-pointer technique is more general and is used to solve problems where you need to compare or search for pairs or ranges within the array.
+
+It uses two pointers that typically start at different positions (often at opposite ends of the array) and move towards each other or in the same direction based on the problem's conditions.
+
+It’s often used for problems like searching for pairs, finding specific distances, or partitioning an array.
+
+Example use case: Check if a given sum exists as a pair in a sorted array.
+
+How it works:
+
+You initialize two pointers at specific positions, usually the start and end of the array.
+Depending on the condition you're trying to satisfy, you move the pointers toward each other (or in the same direction) to narrow down the search space.
+Key Differences:
+Purpose:
+
+Sliding Window is typically used when you need to explore a contiguous subarray or substring with varying sizes or fixed size.
+Two Pointers is more about comparing or searching for specific relationships between elements (like pairs or distances) within the array or list.
+Movement:
+
+Sliding Window focuses on adjusting a "window" of elements that slides across the array.
+Two Pointers involves moving two separate pointers (often starting from opposite ends) to narrow down the solution.
+Problem Type:
+
+Sliding Window works well for problems involving sums, averages, or other calculations over contiguous elements.
+Two Pointers is often used for problems where you need to check pairs, like sum pairs, or for partitioning an array.
+In some cases, the two-pointer technique can be seen as a specific implementation of the sliding window technique, but they are distinct methods based on the type of problem being solved.
+
+
+
+

@@ -1,0 +1,37 @@
+1. getline(): 
+
+The function getline() is used to read an entire line from an input stream (like istringstream in this case) and store it into a string. However, getline() can be customized to read up to a specific delimiter, rather than reading a full line, by providing a third argument to specify the delimiter.
+
+In this case, getline(iss, val, ',') works as follows:
+
+iss: This is an input string stream (in this case, it's istringstream).
+val: This is the variable where the read data will be stored (in this case, a string).
+',': The delimiter is set to a comma ,.
+
+2. istringstream : 
+
+It allows you to take a string and treat it as if it were a stream of data (like reading from a file or user input),
+making it convenient to parse and process the string using stream-based operations.
+
+It can be used to extract values from a string, perform string parsing, and process it in the same way
+you would process data from an input stream.
+
+How is it typically used?
+It is typically used when you have a string and want to parse it or extract individual values
+(e.g., integers, floats, or strings) from the string, much like how you would read values from
+an input stream.
+
+Eg:
+
+    string data = "apple,banana,orange";
+    istringstream iss(data);  // Create istringstream from string, iss is the name
+
+    string fruit;  //fruit here is the ans, it will store the result 
+
+    // Use getline to extract each word separated by commas
+
+    while (getline(iss, fruit, ',')) { 
+        std::cout << "Fruit: " << fruit << std::endl;
+    }
+
+3. stoi : converts string to integer

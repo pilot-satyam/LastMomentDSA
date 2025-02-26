@@ -22,6 +22,9 @@ class Solution{
                 auto it = q.front();
                 auto node = it.first; //0 --> root
                 auto line = it.second; //0 --> line
+                //yaha bas humko override karna hai,since we want bottom values
+                //unlike top view jaisa jaha hum pehele check karte hai ki map present hai ki nai
+                //agar nai tabhi push karo else rheene do
                 m[line] = node->data; 
                 q.pop();
                 if(node->left){

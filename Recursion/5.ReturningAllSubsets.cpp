@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//https://leetcode.com/problems/subsets/description/
 class Solution {
     
     void solve(int idx,vector<int> &nums,vector<int> &ds,vector<vector<int>> &ans)

@@ -6,7 +6,7 @@ Node* merge(Node* list1, Node* list2){
     Node* res = dummyNode;
     while(list1!=NULL and list2!=NULL){
         if(list1->data < list2->data){
-        res->bottom = list1;
+        res->bottom = list1; //basically we are pointing res to l1 child(vertical)
         res = list1;
         list1 = list1->bottom;
     }

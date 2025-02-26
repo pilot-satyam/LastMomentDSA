@@ -11,6 +11,11 @@ using namespace std;
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+//initially first pointer ko upto n tk chala do
+// next agar fast pointer exist karta hai to move fast and slow pointer simultaneously
+// slow head se start hoga kyunki wahi pe hai wo but farst hamara n ke baad se start hoga
+// end me when you will reach end node, return slow -> next to deleteNode and change link to next->next
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n){

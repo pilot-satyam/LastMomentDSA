@@ -34,7 +34,7 @@ class Solution{
         ListNode* fast = head->next;
         while(fast!=NULL and fast->next!=NULL){
             slow = slow->next;
-            fast = fast->next->next;
+            fast = fast->next->next;`ḥ,ky tv
         }
         return slow;
     }
@@ -64,7 +64,7 @@ class Solution{
         ListNode* middle = findMiddle(head);
         ListNode* right = middle->next;
         middle->next = nullptr;
-        ListNode* left = head;
+        ListNode* left = head;              
         left = sortList(left);
         right = sortList(right);    
         return mergeTwoList(left,right);

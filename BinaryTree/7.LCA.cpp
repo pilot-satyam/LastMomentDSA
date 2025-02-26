@@ -25,6 +25,25 @@ public:
 };
 
 
+/**
+ * If given Parent pointer reference
+ *  
+ */
+TreeNode* lca(TreeNode* n1, TreeNode* n2){
+    unordered_set<TreeNode*> set;
+    while(n1 != nullptr){
+        set.insert(n1);
+        n1 = n1->parent;
+    }
+    while(n2 != nullptr){
+        if(set.count(n2)){
+            return n2; //first common ancestor found
+        }
+        n2 = n2->parent;
+    }
+    return nullptr; //no common ancestor found
+}
+
 int main(){
 
 }

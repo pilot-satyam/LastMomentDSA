@@ -1,0 +1,8 @@
+Hi, I’m Satyam Srivastava. I’m glad to be here today. 
+I have two years of experience as a software developer at Persistent Systems.
+ I’ve mainly worked on backend development using Java with Spring Boot, Ruby on Rails, TypeScript, and Node.js.
+
+In my role, I built and improved APIs and focused on making our systems run better. 
+I enjoy solving problems and love writing clean, efficient code.
+
+I’m excited about the opportunity at Swiggy and look forward to tackling new challenges together.

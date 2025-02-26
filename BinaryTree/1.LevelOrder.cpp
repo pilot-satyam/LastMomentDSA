@@ -12,6 +12,16 @@ using namespace std;
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+/*
+Steps : 
+    1) Take Q and push root node
+    2) Iterate over Q and take out the size of Q
+    3) Take a vector level to store the nodes levelwise
+    4) Now pop out the node from Queue and check if left and right exist for that node,if Yes then push in Q
+    5) After pushing left and right, now push the node-> val in "level" vector.
+*/
+
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {

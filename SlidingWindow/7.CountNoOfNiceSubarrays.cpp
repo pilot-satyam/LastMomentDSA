@@ -11,6 +11,11 @@ public: int solve(vector<int> &nums,int k){
     int l=0,r=0,sum=0,ans=0;
     if (k<0) return 0;
     while(r < nums.size()){
+        /*
+        For each element nums[r], check if it is odd by taking nums[r] % 2:
+        If nums[r] is odd, nums[r] % 2 will be 1, so we add 1 to sum.
+        If nums[r] is even, nums[r] % 2 will be 0, so sum remains the same.
+        */
         sum+=(nums[r])%2;
         while(sum > k){
             sum-=(nums[l])%2; // since we need to only figure out 0 and 1   
