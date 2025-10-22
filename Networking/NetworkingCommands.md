@@ -64,4 +64,24 @@ These are the “bread and butter” commands every strong engineer should know 
 dig @8.8.8.8 example.com   # Use specific resolver
 host example.com           # Simple lookup
 getent hosts example.com   # Check system resolver chain
-cat /etc/resolv.conf       # See which DNS your system uses
+cat /etc/resolv.conf       # See which DNS your system uses 
+``` 
+
+🧑‍💻7. Daily Use “Power Combos” (real engineer habits)
+
+```# Check if port is open
+nc -vz oauth-api.integrationcerner.com 443
+
+# View active connections
+ss -tupan | grep 8080
+
+# Check DNS resolution chain
+dig oauth-api.integrationcerner.com +trace
+
+# Verify TLS handshake + CN
+openssl s_client -connect oauth-api.integrationcerner.com:443
+
+# Capture packets for debugging
+sudo tcpdump -i eth0 host 99.83.186.114 -w /tmp/capture.pcap
+```
+
