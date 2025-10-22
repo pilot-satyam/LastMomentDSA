@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class Main {
+class Satyam {
     public static void main(String[] args) {
         String str = "stress";
         HashMap<Character, Integer> m = new HashMap<>();
