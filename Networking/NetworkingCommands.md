@@ -64,4 +64,4 @@ These are the “bread and butter” commands every strong engineer should know 
 dig @8.8.8.8 example.com   # Use specific resolver
 host example.com           # Simple lookup
 getent hosts example.com   # Check system resolver chain
-cat /etc/resolv.conf       # See which DNS your system uses```
+cat /etc/resolv.conf       # See which DNS your system uses
