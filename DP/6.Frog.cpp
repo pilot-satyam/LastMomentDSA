@@ -10,8 +10,10 @@ int f(int ind,vector<int> &heights,vector<int> &dp)
     if(dp[ind]!=-1) return dp[ind];
     int left =f(ind-1,heights,dp)+abs(heights[ind] - heights[ind-1]) ;
     int right = INT_MAX;
-    if(ind > 1)
+    if(ind > 1) // since frog can jump to i from i-2 only if i>=2, 
+                //otherwise it will go out of bounds, ab first idx pe khada hokar i-2 ni mar skta na😂
         right = f(ind-2,heights,dp)+abs(heights[ind]-heights[ind-2]);
+    //storing the value for a subproblem before procedding ahead
     return dp[ind] = min(left,right);
 }
 

@@ -18,6 +18,7 @@ public:
                 }
                 else low = mid + 1;
             }
+            //else if right half is sorted
             else{
                 if(nums[mid]<= target and target <= nums[high]){
                     low = mid + 1;
